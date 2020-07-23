@@ -14,10 +14,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var winText: UILabel!
     @IBOutlet weak var currentPlayerText: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
     
-    
-    @IBAction func playAgain(_ sender: Any) {
-        
+    @IBAction func playAgain(_ sender: UIButton) {
+
         winText.isHidden = true
         game = Game()
         
@@ -29,12 +29,12 @@ class ViewController: UIViewController {
                 let button = subview as! UIButton
                 button.setImage(nil, for: UIControl.State())
             }
-            
         }
 
         game.board.displayInConsole()
     }
-    @IBAction func pressButton(_ sender: UIButton) {
+    
+    @IBAction func pressButton(_ sender: AnyObject) {
         game.sender = sender
         
         if !game.end {
@@ -42,17 +42,17 @@ class ViewController: UIViewController {
             let coords = (game.sender.tag - 1).quotientAndRemainder(dividingBy: game.board.rows.count)
             game.makeMove(coord: coords)
             game.board.displayInConsole()
-            currentPlayerText.text = "Current player: \(game.turn % 2 == 0 ? "X" : "O")"
+            currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): \(game.turn % 2 == 0 ? "X" : "O")"
             currentPlayerText.isHidden = false
             game.end = game.board.win() != Piece.Value.SPACE
         
         
         switch(game.board.win()) {
         case Piece.Value.NOUGHT:
-            winText.text = "nought wins"
+            winText.text = "\(NSLocalizedString("nought", comment: "")) \(NSLocalizedString("wins", comment: ""))"
             winText.isHidden = false
         case Piece.Value.CROSS:
-            winText.text = "cross wins"
+            winText.text = "\(NSLocalizedString("cross", comment: "")) \(NSLocalizedString("wins", comment: ""))"
             winText.isHidden = false
         case Piece.Value.SPACE:
             winText.isHidden = true
@@ -65,11 +65,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.accessibilityIdentifier = "main-board-view"
         winText.accessibilityIdentifier = "winner-text"
+        playAgainButton.titleLabel?.text = "\(NSLocalizedString("play again", comment: ""))"
         currentPlayerText.accessibilityIdentifier = "current-player-text"
+        currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): O"
     }
-    
-    
-    
 
 }
 

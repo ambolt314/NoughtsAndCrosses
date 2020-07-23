@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  NoughtsAndCrosses
+
+  Created by Andrew Bolt on 22/07/2020.
+  Copyright © 2020 Andrew. All rights reserved.
+*/
+
+"Current player" = "Current player";
+"play again" = "play again";
+"nought" = "nought";
+"cross" = "cross";
+"wins" = "wins";
