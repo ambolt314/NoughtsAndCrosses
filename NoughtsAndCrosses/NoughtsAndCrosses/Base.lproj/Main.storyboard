@@ -111,8 +111,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="current player: O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-iE-Ti5">
-                                <rect key="frame" x="16" y="585" width="143" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current player: O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GnK-iE-Ti5">
+                                <rect key="frame" x="16" y="585" width="142.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -165,7 +165,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prw-HA-Jbd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prw-HA-Jbd">
                                 <rect key="frame" x="16" y="610" width="85" height="29"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
                                 <state key="normal" title="play again">
@@ -187,6 +187,8 @@
                             <constraint firstItem="71S-yb-AUz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WX1-zk-Wjg"/>
                             <constraint firstItem="71S-yb-AUz" firstAttribute="top" secondItem="YNy-yf-ykY" secondAttribute="bottom" constant="25.5" id="bhx-Tc-fIA"/>
                             <constraint firstItem="71S-yb-AUz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kZc-Rh-UVX"/>
+                            <constraint firstItem="prw-HA-Jbd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ncs-sS-gqY"/>
+                            <constraint firstItem="GnK-iE-Ti5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ope-RM-QU6"/>
                             <constraint firstItem="660-AV-aOH" firstAttribute="top" secondItem="71S-yb-AUz" secondAttribute="bottom" constant="25.5" id="wEM-oc-Ute"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
