@@ -65,8 +65,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.accessibilityIdentifier = "main-board-view"
         winText.accessibilityIdentifier = "winner-text"
-        print("Play again text: \(String(describing: playAgainButton.titleLabel?.text))\nLocalised version: \( NSLocalizedString("play again", comment: ""))")
-        playAgainButton.titleLabel?.text = "Andrew"//"\( NSLocalizedString("play again", comment: "") )"
+        playAgainButton.setTitle("\(NSLocalizedString("play again", comment: ""))", for: .normal)
         currentPlayerText.accessibilityIdentifier = "current-player-text"
         currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): O"
     }
