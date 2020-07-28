@@ -6,7 +6,7 @@
   Copyright © 2020 Andrew. All rights reserved.
 */
 
-"Current player" = "现任球员";
+"current player" = "现任球员";
 "play again" = "再玩一次";
 "nought" = "圈";
 "cross" = "交叉";

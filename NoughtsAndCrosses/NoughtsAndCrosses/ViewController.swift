@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             }
         }
 
-        currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): O"
+        currentPlayerText.text = "\(NSLocalizedString("current player", comment: "")): O"
         game.board.displayInConsole()
     }
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             let coords = (game.sender.tag - 1).quotientAndRemainder(dividingBy: game.board.rows.count)
             game.makeMove(coord: coords)
             game.board.displayInConsole()
-            currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): \(game.turn % 2 == 0 ? "X" : "O")"
+            currentPlayerText.text = "\(NSLocalizedString("current player", comment: "")): \(game.turn % 2 == 0 ? "X" : "O")"
             currentPlayerText.isHidden = false
             game.end = game.board.win() != Piece.Value.SPACE
         
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         winText.accessibilityIdentifier = "winner-text"
         playAgainButton.setTitle("\(NSLocalizedString("play again", comment: ""))", for: .normal)
         currentPlayerText.accessibilityIdentifier = "current-player-text"
-        currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): O"
+        currentPlayerText.text = "\(NSLocalizedString("current player", comment: "")): O"
     }
 
 }
