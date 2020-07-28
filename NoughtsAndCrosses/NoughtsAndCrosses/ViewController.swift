@@ -31,6 +31,7 @@ class ViewController: UIViewController {
             }
         }
 
+        currentPlayerText.text = "\(NSLocalizedString("Current player", comment: "")): O"
         game.board.displayInConsole()
     }
     
