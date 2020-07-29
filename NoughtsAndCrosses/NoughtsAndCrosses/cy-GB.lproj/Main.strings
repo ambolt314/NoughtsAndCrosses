@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "current player: O"; ObjectID = "GnK-iE-Ti5"; */
+"GnK-iE-Ti5.text" = "current player: O";
+
+/* Class = "UIButton"; normalTitle = "Button21"; ObjectID = "OWP-ES-69O"; */
+"OWP-ES-69O.normalTitle" = "Button21";
+
+/* Class = "UIButton"; normalTitle = "Button12"; ObjectID = "SzL-m9-54D"; */
+"SzL-m9-54D.normalTitle" = "Button12";
+
+/* Class = "UIButton"; normalTitle = "Button02"; ObjectID = "UjS-lt-cDs"; */
+"UjS-lt-cDs.normalTitle" = "Button02";
+
+/* Class = "UIButton"; normalTitle = "Button20"; ObjectID = "cd3-Si-s3g"; */
+"cd3-Si-s3g.normalTitle" = "Button20";
+
+/* Class = "UIButton"; normalTitle = "Button01"; ObjectID = "fGw-0u-iba"; */
+"fGw-0u-iba.normalTitle" = "Button01";
+
+/* Class = "UIButton"; normalTitle = "Button22"; ObjectID = "fdz-OG-MhU"; */
+"fdz-OG-MhU.normalTitle" = "Button22";
+
+/* Class = "UIButton"; normalTitle = "Button11"; ObjectID = "nnr-ZN-LHe"; */
+"nnr-ZN-LHe.normalTitle" = "Button11";
+
+/* Class = "UIButton"; normalTitle = "Button10"; ObjectID = "pEp-Rb-sTN"; */
+"pEp-Rb-sTN.normalTitle" = "Button10";
+
+/* Class = "UIButton"; normalTitle = "play again"; ObjectID = "prw-HA-Jbd"; */
+"prw-HA-Jbd.normalTitle" = "play again";
+
+/* Class = "UIButton"; normalTitle = "Button00"; ObjectID = "riu-DO-3Ch"; */
+"riu-DO-3Ch.normalTitle" = "Button00";
