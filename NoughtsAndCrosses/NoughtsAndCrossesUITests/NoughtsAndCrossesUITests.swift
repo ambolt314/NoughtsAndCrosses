@@ -52,6 +52,22 @@ class NoughtsAndCrossesUITests: XCTestCase {
         
         let secondMoveLabels = gamePage.play(moves: [.seven])
         XCTAssertEqual(secondMoveLabels[TextType.current.rawValue], "current player: O")
+        
+       
+    }
+    
+    func testBoardEmpty() {
+        XCTAssertTrue(gamePage.isEmpty())
+    }
+    
+    func testBoardNotEmpty() {
+        _ = gamePage.play(moves: [.five])
+        XCTAssertFalse(gamePage.isEmpty())
+    }
+    
+    func testBoardState() {
+        _ = gamePage.play(moves: [.one, .two, .three])
+        XCTAssertTrue(gamePage.equals(board: [.o, .x, .o]))
     }
     
     

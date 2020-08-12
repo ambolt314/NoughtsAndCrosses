@@ -33,7 +33,21 @@ class GamePage {
     }
     
     func isEmpty() -> Bool {
-        Button.allCases.allSatisfy({app.buttons[$0.rawValue].label == ""})
+        print("BUTTONS: \(Button.allCases)")
+        
+        for buttonIdentifier in Button.allCases {
+            let image: UIImage? = ((self.app.buttons[buttonIdentifier.rawValue] as XCUIElementQuery) as UIButton).imageView?.image
+            
+        }
+        return Button.allCases.allSatisfy(
+            { (self.app.buttons[$0.rawValue] as UIButton)
+                .imageView?
+                .image != Piece.x.rawValue
+                ||
+                (app.buttons[$0.rawValue] as UIButton)
+                    .imageView?
+                    .image != Piece.x.rawValue
+        })
     }
     
     func playAgain() {
@@ -91,18 +105,18 @@ enum TextType: Int {
     case winner = 1
 }
 
-enum Piece {
-    case x
-    case o
+enum Piece: String {
+    case x = "image-url-for-cross"
+    case o = "image-url-for-nought"
 }
 
 extension XCUIApplication {
     
     var winnerText: String? {
-        return app.staticTexts["winner-text"].label
+        return app.staticTexts["winner-text"].exists ? app.staticTexts["winner-text"].label : nil
     }
     
     var currentPlayerText: String? {
-        return app.staticTexts["current-player-text"].label
+        return app.staticTexts["current-player-text"].exists ? app.staticTexts["current-player-text"].label : nil
     }
 }
