@@ -39,6 +39,27 @@ class GamePage {
     func playAgain() {
         app.buttons["play again"].tap()
     }
+    
+    ///Indicates whether the current page equals the given board
+    func equals(board: [Piece]) -> Bool {
+        var currentBoard: [Piece] = Array()
+        
+        for button in Button.allCases {
+            switch app.buttons[button.rawValue].label {
+            case "X": currentBoard.append(.x)
+            case "O": currentBoard.append(.o)
+            default: continue
+            }
+        }
+        
+        for (current, expected) in zip(currentBoard, board) {
+            if current != expected {
+                return false
+            }
+        }
+        
+        return true
+    }
 }
 
 
@@ -68,6 +89,11 @@ enum Button: String, CaseIterable {
 enum TextType: Int {
     case current = 0
     case winner = 1
+}
+
+enum Piece {
+    case x
+    case o
 }
 
 extension XCUIApplication {

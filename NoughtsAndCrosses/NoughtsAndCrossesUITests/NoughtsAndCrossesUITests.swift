@@ -38,20 +38,20 @@ class NoughtsAndCrossesUITests: XCTestCase {
     
     func testNoughtWin() {
         let labels = gamePage.play(moves: [.five, .six, .nine, .seven, .one])
-        XCTAssert(labels[TextType.winner.rawValue] == "nought wins")
+        XCTAssertEqual(labels[TextType.winner.rawValue], "nought wins")
     }
     
     func testCrossWin() {
         let labels = gamePage.play(moves: [.four, .five, .seven, .eight, .nine, .two])
-        XCTAssert(labels[TextType.winner.rawValue] == "cross wins")
+        XCTAssertEqual(labels[TextType.winner.rawValue], "cross wins")
     }
     
     func testMovesForCurrentPlayerText() {
         let firstMoveLabels = gamePage.play(moves: [.two])
-        XCTAssert(firstMoveLabels[TextType.current.rawValue] == "current player: X")
+        XCTAssertEqual(firstMoveLabels[TextType.current.rawValue], "current player: X")
         
         let secondMoveLabels = gamePage.play(moves: [.seven])
-        XCTAssert(secondMoveLabels[TextType.current.rawValue] == "current player: O")
+        XCTAssertEqual(secondMoveLabels[TextType.current.rawValue], "current player: O")
     }
     
     
