@@ -41,6 +41,18 @@ class GamePage {
     }
 }
 
+
+
+
+///The nomenclature of the buttons with respect to the game grid
+/*
+ 1   |   2   |   3
+ __________________
+ 4   |   5   |   6
+ __________________
+ 7   |   8   |   9
+*/
+
 enum Button: String, CaseIterable {
     case one = "Button00"
     case two = "Button01"
