@@ -9,20 +9,8 @@
 import XCTest
 
 var app: XCUIApplication!
+var gamePage: GamePage!
 
-extension XCUIApplication {
-    var isDiplayingBoard: Bool {
-        return otherElements["main-board-view"].exists
-    }
-    
-    var getWinnerText: String {
-        return app.staticTexts["winner-text"].label
-    }
-    
-    var getCurrentPlayerText: String {
-        return app.staticTexts["current-player-text"].label
-    }
-}
 
 class NoughtsAndCrossesUITests: XCTestCase {
 
@@ -31,6 +19,7 @@ class NoughtsAndCrossesUITests: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
+        gamePage = GamePage(app)
     }
 
     override func tearDown() {
@@ -38,44 +27,31 @@ class NoughtsAndCrossesUITests: XCTestCase {
     }
 
     func testBoardRender() {
-        XCTAssertTrue(app.isDiplayingBoard)
-        XCTAssert(app.getCurrentPlayerText == "Current player: O")
+        XCTAssertTrue(gamePage.isDisplayed())
     }
     
     func testPlayAgain() {
-        let centreButton = app.buttons["Button11"]
-        centreButton.tap()
-        
-        app.buttons["play again"].tap()
-        
-        //check that board is now empty
+        _ = gamePage.play(moves: [.five])
+        gamePage.playAgain()
+        XCTAssertTrue(gamePage.isEmpty())
     }
     
     func testNoughtWin() {
-        app.buttons["Button11"].tap() //O
-        app.buttons["Button12"].tap() //X
-        app.buttons["Button22"].tap() //O
-        app.buttons["Button20"].tap() //X
-        app.buttons["Button00"].tap() //O
-        XCTAssert(app.getWinnerText == "nought wins")
+        let labels = gamePage.play(moves: [.five, .six, .nine, .seven, .one])
+        XCTAssert(labels[TextType.winner.rawValue] == "nought wins")
     }
     
     func testCrossWin() {
-        app.buttons["Button10"].tap() //O
-        app.buttons["Button11"].tap() //X
-        app.buttons["Button20"].tap() //O
-        app.buttons["Button21"].tap() //X
-        app.buttons["Button22"].tap() //O
-        app.buttons["Button01"].tap() //X
-        XCTAssert(app.getWinnerText == "cross wins")
+        let labels = gamePage.play(moves: [.four, .five, .seven, .eight, .nine, .two])
+        XCTAssert(labels[TextType.winner.rawValue] == "cross wins")
     }
     
     func testMovesForCurrentPlayerText() {
-        app.buttons["Button01"].tap() //O
-        XCTAssert(app.getCurrentPlayerText == "Current player: X")
+        let firstMoveLabels = gamePage.play(moves: [.two])
+        XCTAssert(firstMoveLabels[TextType.current.rawValue] == "current player: X")
         
-        app.buttons["Button20"].tap() //X
-        XCTAssert(app.getCurrentPlayerText == "Current player: O")
+        let secondMoveLabels = gamePage.play(moves: [.seven])
+        XCTAssert(secondMoveLabels[TextType.current.rawValue] == "current player: O")
     }
     
     

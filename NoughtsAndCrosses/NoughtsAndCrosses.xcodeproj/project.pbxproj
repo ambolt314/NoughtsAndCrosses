@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10A7D77C24C887B8007AC121 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10A7D77A24C887B8007AC121 /* Localizable.strings */; };
+		491242D024E3E3B000FEE900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10193B7224D0281300EE26E5 /* Main.storyboard */; };
+		491242D224E3E3D100FEE900 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491242D124E3E3D100FEE900 /* GamePage.swift */; };
 		498A2FFC24A0B3CA008D5604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A2FFB24A0B3CA008D5604 /* AppDelegate.swift */; };
 		498A2FFE24A0B3CA008D5604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A2FFD24A0B3CA008D5604 /* ViewController.swift */; };
 		498A300124A0B3CA008D5604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498A2FFF24A0B3CA008D5604 /* Main.storyboard */; };
@@ -37,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		10193B7224D0281300EE26E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		10193B7224D0281300EE26E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Main.storyboard; sourceTree = "<unknown>"; };
 		104CA90C24D1BC3600DDE53F /* cy-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "cy-GB"; path = "cy-GB.lproj/Main.strings"; sourceTree = "<group>"; };
 		104CA90D24D1BC3600DDE53F /* cy-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "cy-GB"; path = "cy-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		104CA90E24D1BC3700DDE53F /* cy-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "cy-GB"; path = "NoughtsAndCrosses/cy-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		10A7D77B24C887B8007AC121 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = NoughtsAndCrosses/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		10A7D77D24C887E0007AC121 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "NoughtsAndCrosses/zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		10A7D77E24C887E2007AC121 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = NoughtsAndCrosses/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		491242D124E3E3D100FEE900 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		498A2FF824A0B3CA008D5604 /* NoughtsAndCrosses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoughtsAndCrosses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		498A2FFB24A0B3CA008D5604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		498A2FFD24A0B3CA008D5604 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 			children = (
 				498A2FFB24A0B3CA008D5604 /* AppDelegate.swift */,
 				498A2FFD24A0B3CA008D5604 /* ViewController.swift */,
+				10193B7224D0281300EE26E5 /* Main.storyboard */,
 				498A2FFF24A0B3CA008D5604 /* Main.storyboard */,
 				498A300224A0B3CC008D5604 /* Assets.xcassets */,
 				498A300424A0B3CC008D5604 /* LaunchScreen.storyboard */,
@@ -147,6 +151,7 @@
 			children = (
 				498A301B24A0B3CC008D5604 /* NoughtsAndCrossesUITests.swift */,
 				498A301D24A0B3CC008D5604 /* Info.plist */,
+				491242D124E3E3D100FEE900 /* GamePage.swift */,
 			);
 			path = NoughtsAndCrossesUITests;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				498A300624A0B3CC008D5604 /* LaunchScreen.storyboard in Resources */,
 				10A7D77C24C887B8007AC121 /* Localizable.strings in Resources */,
 				498A300324A0B3CC008D5604 /* Assets.xcassets in Resources */,
+				491242D024E3E3B000FEE900 /* Main.storyboard in Resources */,
 				498A300124A0B3CA008D5604 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				491242D224E3E3D100FEE900 /* GamePage.swift in Sources */,
 				498A301C24A0B3CC008D5604 /* NoughtsAndCrossesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +353,6 @@
 			children = (
 				498A300024A0B3CA008D5604 /* Base */,
 				10A7D77624C8866B007AC121 /* zh-Hans */,
-				10193B7224D0281300EE26E5 /* en */,
 				104CA90C24D1BC3600DDE53F /* cy-GB */,
 				104CA90F24D1BCCA00DDE53F /* es */,
 				104CA91224D1BE6C00DDE53F /* ar */,
@@ -494,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVN45KAKB;
 				INFOPLIST_FILE = NoughtsAndCrosses/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5GVN45KAKB;
 				INFOPLIST_FILE = NoughtsAndCrosses/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
